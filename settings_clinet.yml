@@ -1,0 +1,986 @@
+api2modbus:
+  version: 1.1.1
+
+server:
+  host: 127.0.0.1
+  port: 502
+
+data:
+  - slave: 1
+    register: 30
+    count: 1
+    name: Grid side voltage L1-N
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 31
+    count: 1
+    name: Grid side voltage L2-N
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 32
+    count: 1
+    name: Grid side voltage L1-L2
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 88
+    count: 1
+    name: Voltage at middle side of relay L1-L2
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 33
+    count: 1
+    name: Inverter output voltage L1-N
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 34
+    count: 1
+    name: Inverter output voltage L2-N
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 35
+    count: 1
+    name: Inverter output voltage L1-L2
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 36
+    count: 1
+    name: Load voltage L1
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 37
+    count: 1
+    name: Load voltage L2
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 38
+    count: 1
+    name: Grid side current L1
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 39
+    count: 1
+    name: Grid side current L2
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 89
+    count: 1
+    name: Grid external Limiter current L1
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 90
+    count: 1
+    name: Grid external Limiter current L12
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 40
+    count: 1
+    name: Inverter output current L1
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 41
+    count: 1
+    name: Inverter output current L1
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 42
+    count: 1
+    name: Gen or AC Coupled power input
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 43
+    count: 1
+    name: Grid side L1 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 44
+    count: 1
+    name: Grid side L1 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 45
+    count: 1
+    name: Total power of grid side L1-L2
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 91
+    count: 1
+    name: Grid external Limter Power 1
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 92
+    count: 1
+    name: Grid external Limter Power 2
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 46
+    count: 1
+    name: Grid external Total Power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 47
+    count: 1
+    name: Inverter outputs L1 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 48
+    count: 1
+    name: Inverter outputs L2 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 49
+    count: 1
+    name: Inverter output Total power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 50
+    count: 1
+    name: Load side L1 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 51
+    count: 1
+    name: Load side L2 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 52
+    count: 1
+    name: Load side Total power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 53
+    count: 1
+    name: Load current L1
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 54
+    count: 1
+    name: Load current L2
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 55
+    count: 1
+    name: Gen Port Voltage
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 56
+    count: 1
+    name: Battery temperature
+    scale: 0.1
+    unit: °C
+    write: False
+  - slave: 1
+    register: 57
+    count: 1
+    name: Batteey voltage
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 58
+    count: 1
+    name: Battery Capacity SOC %
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 59
+    count: 1
+    name: PV Input 1
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 60
+    count: 1
+    name: PV Input 2
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 61
+    count: 1
+    name: Battery output power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 62
+    count: 1
+    name: Battery output current
+    scale: 0.01
+    unit: A
+    write: False
+  - slave: 1
+    register: 63
+    count: 1
+    name: Load frequency
+    scale: 0.01
+    unit: Hz
+    write: False
+  - slave: 1
+    register: 64
+    count: 1
+    name: Inverter output frequency
+    scale: 0.01
+    unit: Hz
+    write: False
+  - slave: 1
+    register: 65
+    count: 1
+    name: Grid side relay status
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 93
+    count: 1
+    name: Generator side relay status
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 66
+    count: 1
+    name: Generator relay Frequency
+    scale: 0.01
+    unit: Hz
+    write: False
+  - slave: 1
+    register: 94
+    count: 1
+    name: Control Mode
+    scale: 1
+    unit: ""
+    write: False
+  - slave: 1
+    register: 95
+    count: 1
+    name: Equalization V
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 96
+    count: 1
+    name: Absorption V
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 97
+    count: 1
+    name: Float V
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 98
+    count: 1
+    name: Battery Capacity
+    scale: 1
+    unit: Ah
+    write: False
+  - slave: 1
+    register: 99
+    count: 1
+    name: Battery Empty
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 100
+    count: 1
+    name: Zero Export Power
+    scale: 0.1
+    unit: °C
+    write: False
+  - slave: 1
+    register: 100
+    count: 1
+    name: Equalization day cycle
+    scale: 1
+    unit: Day
+    write: False
+  - slave: 1
+    register: 100
+    count: 1
+    name: Equalization time
+    scale: 0.5
+    unit: Hour
+    write: False
+  - slave: 1
+    register: 103
+    count: 1
+    name: TEMPCO
+    scale: 1
+    unit: mV/°C
+    write: False
+  - slave: 1
+    register: 104
+    count: 1
+    name: Max A Charge from PV or Grid
+    scale: 1
+    unit: A
+    write: False
+  - slave: 1
+    register: 105
+    count: 1
+    name: Max A discharge from Batt
+    scale: 1
+    unit: A
+    write: False
+  - slave: 1
+    register: 107
+    count: 1
+    name: Battery operates according to voltage or SOC
+    scale: 1
+    unit: ""
+    write: False
+  - slave: 1
+    register: 108
+    count: 1
+    name: Lithium battery wake up sign bit Activate Batt
+    scale: 1
+    unit: ""
+    write: False
+  - slave: 1
+    register: 109
+    count: 1
+    name: Battery resistance value
+    scale: 1
+    unit: mΩ
+    write: False
+  - slave: 1
+    register: 110
+    count: 1
+    name: Battery charging efficiency
+    scale: 0.1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 111
+    count: 1
+    name: Battery capacity Shut Down
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 112
+    count: 1
+    name: Battery capacity Restart
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 113
+    count: 1
+    name: Battery capacity Low Batt
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 114
+    count: 1
+    name: Battery voltage Shut Down
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 115
+    count: 1
+    name: Battery voltage Restart
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 116
+    count: 1
+    name: Battery voltage Low Batt
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 117
+    count: 1
+    name: Maximum operating timeof generator
+    scale: 0.1
+    unit: Hr
+    write: False
+  - slave: 1
+    register: 118
+    count: 1
+    name: Generator cooling time
+    scale: 0.1
+    unit: Hr
+    write: False
+  - slave: 1
+    register: 119
+    count: 1
+    name: Generator charging Starting voltage point
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 120
+    count: 1
+    name: Generator charging starting capacity point
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 121
+    count: 1
+    name: Generator battery charging current
+    scale: 1
+    unit: A
+    write: False
+  - slave: 1
+    register: 122
+    count: 1
+    name: Grid charging Start voltage point
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 123
+    count: 1
+    name: Grid charging start capacity point
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 124
+    count: 1
+    name: Grid battery charging current
+    scale: 1
+    unit: A
+    write: False
+  - slave: 1
+    register: 125
+    count: 1
+    name: Generator charging enable
+    scale: 1
+    unit: ""
+    write: False
+  - slave: 1
+    register: 126
+    count: 1
+    name: Grid charging enable
+    scale: 1
+    unit: ""
+    write: False
+  - slave: 1
+    register: 127
+    count: 1
+    name: Solar Input as PSU
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 128
+    count: 1
+    name: Force Smart load ON
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 129
+    count: 1
+    name: Generator input is enabled as Smart load output
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 130
+    count: 1
+    name: Smart Load OFF batt Voltage
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 131
+    count: 1
+    name: Smart Load OFF batt
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 132
+    count: 1
+    name: Smart Load ON batt Voltage
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 133
+    count: 1
+    name: Smart Load ON batt
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 135
+    count: 1
+    name: Minimum solar power required to start Smart load when connected to Grid
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 136
+    count: 1
+    name: Gen Grid Signal On
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 137
+    count: 1
+    name: Limit the maximum power output of the grid connection
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 139
+    count: 1
+    name: Sell mode time point 1 voltage
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 140
+    count: 1
+    name: Sell mode time point 2 voltage
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 141
+    count: 1
+    name: Sell mode time point 3 voltage
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 142
+    count: 1
+    name: Sell mode time point 4 voltage
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 143
+    count: 1
+    name: Sell mode time point 5 voltage
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 144
+    count: 1
+    name: Sell mode time point 6 voltage
+    scale: 0.01
+    unit: V
+    write: False
+  - slave: 1
+    register: 146
+    count: 1
+    name: External CT sensor directional detection
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 147
+    count: 1
+    name: Restore connection time
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 148
+    count: 1
+    name: Solar Arc Fault Mode turned on
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 149
+    count: 1
+    name: Grid Mode
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 150
+    count: 1
+    name: Grid Frequency Setting
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 151
+    count: 1
+    name: Grid Type
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 152
+    count: 1
+    name: Grid Vol High
+    scale: 0.1
+    unit: V
+    write: False
+  - slave: 1
+    register: 153
+    count: 1
+    name: Grid Vol Low
+    scale: 0.1
+    unit: v
+    write: False
+  - slave: 1
+    register: 154
+    count: 1
+    name: Grid Hz High
+    scale: 0.01
+    unit: Hz
+    write: False
+  - slave: 1
+    register: 155
+    count: 1
+    name: Grid Hz Low
+    scale: 0.01
+    unit: Hz
+    write: False
+  - slave: 1
+    register: 156
+    count: 1
+    name: Generator connected to GRID input
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 157
+    count: 1
+    name: GEN peak shaving Power
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 159
+    count: 1
+    name: Parallel register 1
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 1
+    count: 1
+    name: Max Sell Power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 0
+    count: 1
+    name: Work Mode
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 2
+    count: 1
+    name: Solar Sell
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 4
+    count: 1
+    name: Sell mode time point 1
+    scale: 1
+    unit: Hr
+    write: False
+  - slave: 1
+    register: 8
+    count: 1
+    name: Sell mode time point 2
+    scale: 1
+    unit: Hr
+    write: False
+  - slave: 1
+    register: 12
+    count: 1
+    name: Sell mode time point 3
+    scale: 1
+    unit: Hr
+    write: False
+  - slave: 1
+    register: 16
+    count: 1
+    name: Sell mode time point 4
+    scale: 1
+    unit: Hr
+    write: False
+  - slave: 1
+    register: 20
+    count: 1
+    name: Sell mode time point 5
+    scale: 1
+    unit: Hr
+    write: False
+  - slave: 1
+    register: 24
+    count: 1
+    name: Sell mode time point 6
+    scale: 1
+    unit: Hr
+    write: False
+  - slave: 1
+    register: 5
+    count: 1
+    name: Sell mode time point 1 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 9
+    count: 1
+    name: Sell mode time point 2 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 13
+    count: 1
+    name: Sell mode time point 3 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 17
+    count: 1
+    name: Sell mode time point 4 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 21
+    count: 1
+    name: Sell mode time point 5 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 25
+    count: 1
+    name: Sell mode time point 6 power
+    scale: 1
+    unit: W
+    write: False
+  - slave: 1
+    register: 6
+    count: 1
+    name: Point 1 capacity
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 10
+    count: 1
+    name: Point 2 capacity
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 14
+    count: 1
+    name: Point 3 capacity
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 18
+    count: 1
+    name: Point 4 capacity
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 22
+    count: 1
+    name: Point 5 capacity
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 26
+    count: 1
+    name: Point 6 capacity
+    scale: 1
+    unit: "%"
+    write: False
+  - slave: 1
+    register: 7
+    count: 1
+    name: Time point 1 charge enable
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 11
+    count: 1
+    name: Time point 2 charge enable
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 15
+    count: 1
+    name: Time point 3 charge enable
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 19
+    count: 1
+    name: Time point 4 charge enable
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 23
+    count: 1
+    name: Time point 5 charge enable
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 27
+    count: 1
+    name: Time point 6 charge enable
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 28
+    count: 1
+    name: Energy Pattern
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 145
+    count: 1
+    name: AC Coupled export to grid cutoff
+    scale: 1
+    unit:
+    write: True
+    write_type: int
+    write_range:
+      - 0
+      - 1
+  - slave: 1
+    register: 158
+    count: 1
+    name: Grid Connect/Disconnect
+    scale: 1
+    unit:
+    write: True
+    write_type: int
+    write_range:
+      - 0
+      - 1
+  - slave: 1
+    register: 3
+    count: 1
+    name: Grid charging start capacity point
+    scale: 1
+    unit:
+    write: True
+    write_type: int
+    write_range:
+      - 0
+      - 255
+  - slave: 1
+    register: 106
+    count: 1
+    name: Without name
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 134
+    count: 1
+    name: Without name
+    scale: 1
+    unit:
+    write: False
+  - slave: 1
+    register: 138
+    count: 1
+    name: Without name
+    scale: 1
+    unit:
+    write: False

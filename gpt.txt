@@ -1,0 +1,72 @@
+from pymongo import MongoClient
+
+# Conexión a la base de datos
+client = MongoClient("mongodb://localhost:27017/")
+db = client["mi_base_de_datos"]
+
+# Selección de la colección
+coleccion = db["mi_coleccion"]
+
+# Clasificación de los documentos por la marca de tiempo del ObjectId
+documentos_clasificados = coleccion.find().sort("_id.timestamp")
+
+# Recorrido de los documentos clasificados
+for doc in documentos_clasificados:
+    print(doc)
+
+// Inicializar WebGL y Three.js
+const canvas = document.querySelector("#mycanvas");
+const renderer = new THREE.WebGLRenderer({ canvas });
+const scene = new THREE.Scene();
+
+// Crear geometría y material del cubo
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({
+    color: 0x00ff00,
+    wireframe: true
+});
+
+// Crear objeto mesh que combina la geometría y el material del cubo
+const mesh = new THREE.Mesh(geometry, material);
+
+// Añadir el objeto mesh a la escena y configurar la cámara
+scene.add(mesh);
+const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 5);
+camera.position.z = 2;
+
+// Crear un bucle de renderizado que dibuje el cubo en el canvas
+function animate() {
+    requestAnimationFrame(animate);
+
+    mesh.rotation.x += 0.01;
+    mesh.rotation.y += 0.01;
+
+    renderer.render(scene, camera);
+
+// obtiene el elemento <ul>
+const miUl = document.querySelector('ul');
+
+// un conjunto de datos con información para cada <li>
+const misDatos = [
+  {
+    id: 1,
+    informacion: 'Información del <li> 1',
+  },
+  {
+    id: 2,
+    informacion: 'Información del <li> 2',
+  },
+  // ...
+];
+
+// itera sobre cada elemento de datos
+for (const dato of misDatos) {
+  // crea un nuevo elemento <li>
+  const miLi = document.createElement('li');
+
+  // agrega contenido al elemento <li>
+  miLi.innerHTML = `<a><span class="text">${dato.informacion}</span></a>`;
+
+  // agrega el nuevo elemento <li> al elemento <ul>
+  miUl.appendChild(miLi);
+}

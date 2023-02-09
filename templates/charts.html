@@ -1,0 +1,53 @@
+{% include 'head.html' %}
+{% include 'spinner.html' %}
+{% include 'sidebar.html' %}
+
+<!-- Content Start -->
+<div class="content">
+    <link href="{{ url_for('static', path='/css/charts.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/rzslider.css') }}" />
+    <script src="
+                https://cdn.jsdelivr.net/npm/chart.js@4.2.0/dist/chart.umd.min.js
+                "></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-crosshair@1.2.0/dist/chartjs-plugin-crosshair.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/2.1.2/chartjs-plugin-annotation.min.js"
+        integrity="sha512-6dmCqRV2/iXtbm8z/9+7bzLhOkmXvq9R6WoR+8QgrojgMU0/Nin+/eaWouEGEU5ishyKDYgRoiq7kURCVmwmqw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <link data-require="bootstrap@3.3.7" data-semver="3.3.7" rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> -->
+    <script data-require="angular.js@1.6.0" data-semver="1.6.0"
+        src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+    <script data-require="ui-bootstrap@*" data-semver="2.2.0"
+        src="https://cdn.rawgit.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-tpls-2.2.0.js"></script>
+    <script src="{{ url_for('static', path='/js/rzslider.js') }}"></script>
+    {% include 'navbar.html' %}
+    <!-- Chart Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="row g-4">
+            <div class="col-sm-12 col-xl-6">
+                <div class="bg-secondary rounded h-100 p-4">
+                    <div class="temporalidades">
+                        <div class="temps">
+                            <rzslider rz-slider-model="dateRangeSlider.minValue"
+                                rz-slider-high="dateRangeSlider.maxValue" rz-slider-options="dateRangeSlider.options">
+                            </rzslider>
+                        </div>
+                    </div>
+
+                    <canvas id="line-chart"></canvas>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', path='js/charts.js') }}"></script>
+
+    <!-- Chart End -->
+    {% include 'select.html' %}
+    {% include 'footer.html' %}

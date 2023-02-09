@@ -1,0 +1,55 @@
+{% include 'head.html' %}
+{% include 'spinner.html' %}
+{% include 'sidebar.html' %}
+
+<!-- Content Start -->
+<div class="content">
+    {% include 'navbar.html' %}
+    <!-- Recent Sales Start -->
+    <div class="container-fluid pt-4 px-4">
+        <div class="bg-secondary text-center rounded p-4">
+            <form id="formulario">
+                <!-- action="" method="post"> -->
+
+                <div class="border border-light padding rounded p-2 mb-2">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="mb-0">Simulator</h6>
+                    </div>
+                    <div class="d-flex p-2 align-items-center flex-wrap flex-column">
+                        <div class="align-items-center p-1">Number of cars</div>
+                        <input class="number form-control" name="finaldate" type="number" id="numInput" placeholder="1"
+                            onchange="myFunc()">
+                        <div class="d-flex align-items-center flex-wrap justify-content-evenly pt-3">
+                            <h6>Number</h6>
+                            <h6>Start time</h6>
+                            <h6>Duration (15m)</h6>
+                            <h6>Power (kW)</h6>
+                            <div class="d-flex align-items-center ">
+                                <div>
+                                    <input class="number form-control" type="number" value="1" readonly>
+                                </div>
+                                <div>
+                                    <input class="time form-control" name="starttime1" type="time">
+                                </div>
+                                <div>
+                                    <input class="number form-control" name="finaldate" type="number" id="duration1"
+                                        placeholder="1">
+                                </div>
+                                <div>
+                                    <input class="number form-control" name="finaldate" type="number" id="duration1"
+                                        placeholder="100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary" type="submit" id="envio">Calculate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', path='/js/index.js') }}"></script>
+    <!-- Recent Sales End -->
+    {% include 'select.html' %}
+    {% include 'footer.html' %}

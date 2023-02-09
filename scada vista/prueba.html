@@ -1,0 +1,68 @@
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+            grid-auto-rows: 1fr 1fr;
+            overflow: hidden;
+        }
+
+        .grid-item {
+            z-index: 1;
+        }
+
+        /* estilo para la línea segmentada y con movimiento */
+        .moving-line {
+            width: 100%;
+            height: 2px;
+            background-color: black;
+            z-index: 0;
+            animation: move-line 2s linear infinite;
+            overflow: hidden;
+        }
+
+        .grid-line {
+            top: -50%;
+            position: static;
+
+        }
+
+        .grid-item-line {
+            position: static;
+            z-index: 1;
+        }
+
+        /* animación para mover la línea de izquierda a derecha */
+        @keyframes move-line {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Contenido de la casilla 1</div>
+        <div class="grid-item">Contenido de la casilla 2</div>
+        <div class="grid-item">
+            <div>Contenido de la casilla 3</div>
+        </div>
+        <div class="grid-item">
+            El contenido mayor
+            <div class="moving-line grid-line"></div>
+        </div>
+        <div class="grid-item">Contenido de la casilla 4</div>
+        <div class="grid-item">Contenido de la casilla 4</div>
+        <div class="grid-item">Contenido de la casilla 4</div>
+        <div class="grid-item">Contenido de la casilla 4</div>
+        <div class="grid-item">Contenido de la casilla 4</div>
+        <div class="grid-item">Contenido de la casilla 4</div>
+
+    </div>
+</body>
