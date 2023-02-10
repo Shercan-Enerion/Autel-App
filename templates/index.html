@@ -10,11 +10,71 @@
         <div class="bg-secondary text-center rounded p-4">
             <form id="formulario">
                 <!-- action="" method="post"> -->
-
                 <div class="border border-light padding rounded p-2 mb-2">
                     <div class="d-flex align-items-center justify-content-between mb-2">
                         <h6 class="mb-0">Simulator</h6>
                     </div>
+                    <div class="d-grid mb-1">
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <div class="d-flex flex-column align-items-start p-2 ">
+                                <div class="pt-1">New rates</div>
+                                <div class="pb-1 pt-0">
+                                    <input type="checkbox" class="form-check-input mt-0">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-start p-2 ">
+                                <div class="pt-1">Simulation name</div>
+                                <div class="pb-1">
+                                    <input type="text" class="form-control" placeholder="Simulation1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap">
+                            <div class="d-flex flex-column align-items-start p-2 w-100">
+                                <div class="pt-1">Description</div>
+                                <div class="pb-1 w-100">
+                                    <input type="text" class="form-control" placeholder="Description rate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <div class="d-flex flex-column align-items-start p-2 ">
+                                <div class="pt-1">Electric company</div>
+                                <div class="pb-1 pt-0">
+                                    <input type="text" class="form-control" placeholder="My company">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-start p-2 ">
+                                <div class="pt-1">Rates company</div>
+                                <div class="pb-1">
+                                    <input type="text" class="form-control" placeholder="EV-RATE1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <div class="d-flex flex-column align-items-start p-2 ">
+                                <div class="pt-1">Period company</div>
+                                <div class="pb-1 pt-0">
+                                    <input type="text" class="form-control" placeholder="1">
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-start p-2 ">
+                                <div class="pt-1">Rate company</div>
+                                <div class="pb-1">
+                                    <input type="text" class="form-control" placeholder="0.5543">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-between">
+                            <div class="d-flex flex-column align-items-start p-2 ">
+                                <div class="pt-1">Agree period</div>
+                                <div class="pb-1 pt-0">
+                                    <button type="button" class="btn btn-secondary">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="d-flex p-2 align-items-center flex-wrap flex-column">
                         <div class="align-items-center p-1">Number of cars</div>
                         <input class="number form-control" name="finaldate" type="number" id="numInput" placeholder="1"
@@ -23,14 +83,12 @@
                             <h6>Number</h6>
                             <h6>Start time</h6>
                             <h6>Duration (15m)</h6>
-                            <h6>Power (kW)</h6>
 
                         </div>
                     </div>
-                </div>
-                <div>
-                    <button class="btn btn-primary" type="submit" id="envio">Calculate</button>
-                </div>
+                    <div>
+                        <button class="btn btn-primary" type="submit" id="envio">Calculate</button>
+                    </div>
             </form>
         </div>
     </div>

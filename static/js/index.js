@@ -19,8 +19,7 @@ function myFunc() {
                                         placeholder="1">
                                 </div>
                                 <div>
-                                    <input class="number form-control" name="finaldate" type="number" id="duration${i}"
-                                        placeholder="100">
+                                    
                                 </div>`;
     numInput.insertBefore(newDiv, numInput.nextSibling);
   }
