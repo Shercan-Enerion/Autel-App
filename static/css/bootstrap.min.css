@@ -2233,7 +2233,7 @@ progress {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #6c7293;
+  color: #f8f8f8;
   background-color: #000;
   background-clip: padding-box;
   border: 1px solid #000;
@@ -3153,8 +3153,8 @@ fieldset:disabled .btn {
 .btn-check:focus + .btn-secondary,
 .btn-secondary:focus {
   color: #fff;
-  background-color: #15181f;
-  border-color: #14161d;
+  background-color: #e60c0ce8;
+  border-color: #e60c0ce8;
   box-shadow: 0 0 0 0.25rem rgba(60, 62, 69, 0.5);
 }
 

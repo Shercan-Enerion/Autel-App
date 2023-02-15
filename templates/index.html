@@ -8,7 +8,7 @@
     <!-- Recent Sales Start -->
     <div class="container-fluid pt-4 px-4">
         <div class="bg-secondary text-center rounded p-4">
-            <form id="formulario">
+            <form id="formSim">
                 <!-- action="" method="post"> -->
                 <div class="border border-light padding rounded p-2 mb-2">
                     <div class="d-flex align-items-center justify-content-between mb-2">
@@ -19,7 +19,7 @@
                             <div class="d-flex flex-column align-items-start p-2 ">
                                 <div class="pt-1">New rates</div>
                                 <div class="pb-1 pt-0">
-                                    <input type="checkbox" class="form-check-input mt-0">
+                                    <input type="checkbox" class="form-check-input mt-0" id="checkSimu">
                                 </div>
                             </div>
                             <div class="d-flex flex-column align-items-start p-2 ">
@@ -41,13 +41,22 @@
                             <div class="d-flex flex-column align-items-start p-2 ">
                                 <div class="pt-1">Electric company</div>
                                 <div class="pb-1 pt-0">
-                                    <input type="text" class="form-control" placeholder="My company">
+                                    <input type="text" class="form-control ui-autocomplete-input" autocomplete="off"
+                                        id="electricCo" placeholder="My company">
                                 </div>
                             </div>
                             <div class="d-flex flex-column align-items-start p-2 ">
-                                <div class="pt-1">Rates company</div>
+                                <div class="pt-1">Sector</div>
                                 <div class="pb-1">
-                                    <input type="text" class="form-control" placeholder="EV-RATE1">
+                                    <input type="text" class="form-control ui-autocomplete-input" autocomplete="off"
+                                        id="sector" placeholder="Residential" disabled>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-start p-2 ">
+                                <div class="pt-1">Rate name</div>
+                                <div class="pb-1">
+                                    <input type="text" class="form-control" placeholder="EV-RATE1" autocomplete="on"
+                                        id="rateName" disabled>
                                 </div>
                             </div>
                         </div>
@@ -55,35 +64,46 @@
                             <div class="d-flex flex-column align-items-start p-2 ">
                                 <div class="pt-1">Period company</div>
                                 <div class="pb-1 pt-0">
-                                    <input type="text" class="form-control" placeholder="1">
+                                    <select
+                                        class="selectpicker text-start align-middle table-bordered table-hover mb-0 form-control"
+                                        id="periodCompany" name="periodCompany">
+                                        <option>Select a period</option>
+                                    </select>
+                                    <!-- <input type="number" class="number form-control" placeholder="1"> -->
                                 </div>
                             </div>
                             <div class="d-flex flex-column align-items-start p-2 ">
                                 <div class="pt-1">Rate company</div>
                                 <div class="pb-1">
-                                    <input type="text" class="form-control" placeholder="0.5543">
+                                    <input type="number" id="rateVal" class="number form-control" step=0.0001
+                                        placeholder="0.5543">
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-wrap justify-content-between">
-                            <div class="d-flex flex-column align-items-start p-2 ">
-                                <div class="pt-1">Agree period</div>
-                                <div class="pb-1 pt-0">
-                                    <button type="button" class="btn btn-secondary">+</button>
+                        <div id="newRates">
+                            <div class="d-flex flex-wrap justify-content-between">
+                                <div class="d-flex flex-column align-items-start p-2 w-100">
+                                    <div class="pt-1">Agree period</div>
+                                    <div class="pb-1 pt-0 w-100" id="divPeriod">
+                                        <button type="button" class="btn btn-secondary"
+                                            onclick="addedPeriod()">+</button>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-
                     <div class="d-flex p-2 align-items-center flex-wrap flex-column">
                         <div class="align-items-center p-1">Number of cars</div>
                         <input class="number form-control" name="finaldate" type="number" id="numInput" placeholder="1"
-                            onchange="myFunc()">
-                        <div class="d-flex align-items-center flex-wrap justify-content-evenly pt-3" id="tableData">
-                            <h6>Number</h6>
-                            <h6>Start time</h6>
-                            <h6>Duration (15m)</h6>
-
+                            onchange="addedCars()">
+                        <!-- <div class="d-flex align-items-center flex-wrap justify-content-evenly pt-3" id="tableData"> -->
+                        <div class="container pt-3" id="tableData">
+                            <div class="contaier row">
+                                <h6 class="col">Number</h6>
+                                <h6 class="col">Start time</h6>
+                                <h6 class="col pe-5">Duration (15m)</h6>
+                            </div>
                         </div>
                     </div>
                     <div>

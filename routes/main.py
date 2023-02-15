@@ -1,36 +1,18 @@
 # -----------------------------------modules-----------------------------
-import asyncio
-from security.verify_route import VerifyTokenRoute
-import uvicorn
-from fastapi import FastAPI
-# from routes.main import web
-# from config.var_env import mode
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi import Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from datetime import datetime
-from fastapi.responses import FileResponse
 from fastapi import APIRouter
 from starlette.responses import RedirectResponse
-import pathlib
-from fastapi import Request, WebSocketDisconnect
+from fastapi import Request
 from fastapi.websockets import WebSocket
-from websockets.exceptions import ConnectionClosed
-from security.jwt_functions import validate_token, write_token
-import json
-from csv import DictWriter
-from security.auth import auth_routes
+from security.jwt_functions import write_token
 from classobject.classes import signupClass, Hash
 from config.bd import dataBase
-from bson.objectid import ObjectId
-from fastapi.encoders import jsonable_encoder
-from fastapi.responses import JSONResponse
 from starlette.status import HTTP_302_FOUND
-from security.jwt_functions import validate_token, write_token
-from typing import Dict, List
-from time import sleep
+from security.jwt_functions import write_token
+from typing import List
 
 main = APIRouter()
 
